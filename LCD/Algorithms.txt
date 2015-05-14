@@ -1,0 +1,62 @@
+﻿1) LCD1
+	Uses Stream Writer to write the data to disk
+	Uses File.OpenText as my reader of data
+	Reads one line at a time
+	Splits on ' ' before passing to method for processing
+	Uses StringBuilder to build up each individual line before writing to disk.  Initialize the size of the StringBuilder to expected size of the output, initialize stringbuilder as class variables, clear before using
+	Writes to disk as each line of text is completed
+
+2) LCD2
+	Uses Stream Writer to write the data to disk
+	File.ReadAllText to retrieve text from file
+	Uses Regular Expression matches to pass into the method to process individual lines
+	Has same processing of individual numbers as LCD1
+
+5) LCD5
+	Uses Stream Writer to write the data to disk
+	Uses File.OpenText as my reader of data
+	Uses ReadLines and loops over the resulting array
+	Splits on ' ' before passing to method for processing
+	Uses StringBuilder to build up each individual line before writing to disk.  Initialize the size of the StringBuilder to expected size of the output
+	Writes to disk as each line of text is completed
+
+7) 	LCD3
+	Uses Stream Writer to write the data to disk
+	Uses File.OpenText as my reader of data
+	Uses ReadLines and loops over the resulting array
+	Splits on ' ' before passing to method for processing
+	Modified Processing to write to the output file instead of storing everything in objects for the individual lines
+
+8) LCD6
+	Uses Stream Writer to write the data to disk
+	Uses File.OpenText as my reader of data
+	Uses ReadLines and loops over the resulting array
+	Splits on ' ' before passing to method for processing
+	Uses a class of text to print out instead of calculating the strings
+	Uses StringBuilder to build up each individual line before writing to disk.  Initialize the size of the StringBuilder to expected size of the output, initialize stringbuilder as class variables, clear before using
+	Writes to disk as each line of text is completed
+
+Because LCD6 was faster than all of the others, I incorporated the changes from LCD6 into LCD1, 2, 3, 4.  The only didfference between LCD5 and LCD6 are restricted to the size class work.
+
+9) LCD4
+	Completely reworked the algorithm to generate the formatted output using string.formats in the processor
+
+Repurposed the following because they were significantly slower than the original LCD1 and LCD2...
+3) LCD3
+	Uses Stream Writer to write the data to disk
+	Uses File.OpenText as my reader of data
+	Reads one line at a time
+	Splits on ' ' before passing to method for processing
+	Writes all of the lines at once by combining the StringBuilder at the end
+
+4) LCD4
+	Uses Stream Writer to write the data to disk
+	File.ReadAllText to retrieve text from file
+	Uses Regular Expression matches to pass into the method to process individual lines
+	Has same processing of individual numbers as LCD3
+
+6) LCD4
+	Uses Stream Writer to write the data to disk
+	File.ReadAllText to retrieve text from file
+	Uses Regular Expression matches to pass into the method to process individual lines
+	Modified Processing to write to the output file instead of storing everything in objects for the individual lines

@@ -1,8 +1,0 @@
-D:\temp\PC\Poker\PokerF\PokerF\bin\Release\PokerF.exe.config
-D:\temp\PC\Poker\PokerF\PokerF\bin\Release\PokerF.XML
-D:\temp\PC\Poker\PokerF\PokerF\bin\Release\PokerF.exe
-D:\temp\PC\Poker\PokerF\PokerF\bin\Release\PokerF.pdb
-D:\temp\PC\Poker\PokerF\PokerF\bin\Release\FSharp.Core.dll
-D:\temp\PC\Poker\PokerF\PokerF\bin\Release\FSharp.Core.xml
-D:\temp\PC\Poker\PokerF\PokerF\obj\Release\PokerF.exe
-D:\temp\PC\Poker\PokerF\PokerF\obj\Release\PokerF.pdb
