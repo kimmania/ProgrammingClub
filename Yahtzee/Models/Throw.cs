@@ -5,11 +5,19 @@ namespace Yahtzee.Models
     internal class Throw
     {
         List<int> Dice;
-
-        public Throw() => Dice = new List<int> { ThrowDie(), ThrowDie(), ThrowDie(), ThrowDie(), ThrowDie() };
+        public Score Score { get; private set; }
+        public Throw()
+        {
+            Dice = new List<int> { ThrowDie(), ThrowDie(), ThrowDie(), ThrowDie(), ThrowDie() };
+            Score = new Score(Dice);
+        }
 
         //we should only be getting 5, but forcing it with the take
-        public Throw(string Throw) => Dice = Throw.Split(' ').Select(x => TextToInt(x)).Take(5).ToList(); 
+        public Throw(string Throw)
+        {
+            Dice = Throw.Split(' ').Select(x => TextToInt(x)).Take(5).ToList();
+            Score = new Score(Dice);
+        }
 
         public override string ToString() => String.Join(" ", Dice);
 
