@@ -10,11 +10,11 @@ Console.WriteLine("Hello, World!");
 
 
 //read data in from file
-//var games = StaticUtilities.LoadGamesFromFile("./SampleFiles/simpleTest.txt");
-//foreach (var game in games)
-//{
-//    Console.WriteLine($"{game}\n\n");
-//}
+var games = StaticUtilities.LoadGamesFromFile("./SampleFiles/simpleTest.txt");
+foreach (var game in games)
+{
+    Console.WriteLine($"{game}\n\n");
+}
 
 ////tests hand scoring
 //var testThrow = "1 2 3 4 5";
