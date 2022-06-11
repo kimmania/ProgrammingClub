@@ -161,6 +161,10 @@ namespace Yahtzee.Models
         }
 
         public override string ToString()
-            => $"{Ones} {Twos} {Threes} {Fours} {Fives} {Sixes} {Chance} {ThreeOfKind} {FourOfKind} {FiveOfKind} {ShortStraight} {LongStraight} {FullHouse} {Bonus}";
+            => $"{Ones} {Twos} {Threes} {Fours} {Fives} {Sixes} {Chance} {ThreeOfKind} {FourOfKind} {FiveOfKind} {ShortStraight} {LongStraight} {FullHouse} {Bonus} {TotalScore}";
+
+        public string PrintPossibleScores()
+            =>$"{Ones.ToString("00")} {Twos.ToString("00")} {Threes.ToString("00")} {Fours.ToString("00")} {Fives.ToString("00")} {Sixes.ToString("00")} {Chance.ToString("00")} {ThreeOfKind.ToString("00")} {FourOfKind.ToString("00")} {FiveOfKind.ToString("00")} {ShortStraight.ToString("00")} {LongStraight.ToString("00")} {FullHouse.ToString("00")}";
+        
     }
 }

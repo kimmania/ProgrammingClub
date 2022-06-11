@@ -14,5 +14,7 @@ namespace Yahtzee.Models
         public Game(IEnumerable<string> throws) => Throws = throws.Select(x => new Throw(x)).ToList();
 
         public override string ToString() => String.Join("\n", Throws);
+
+        public string PrintRowScores() => String.Join("\n", Throws.Select(x => x.Score.ToString()));
     }
 }

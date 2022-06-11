@@ -13,7 +13,7 @@ Console.WriteLine("Hello, World!");
 var games = StaticUtilities.LoadGamesFromFile("./SampleFiles/simpleTest.txt");
 foreach (var game in games)
 {
-    Console.WriteLine($"{game}\n\n");
+    Console.WriteLine($"{game.PrintRowScores()}\n\n");
 }
 
 ////tests hand scoring
