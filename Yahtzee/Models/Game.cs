@@ -31,9 +31,10 @@ namespace Yahtzee.Models
             // the highest score possible
             for (int rec = 0; rec < 13; rec++)
             {
+                var negatedValues = Throws[rec].Score.NegatedPossibleScores;
                 for (int field = 0; field < 13; field++)
                 {
-                    dissimilarity[rec, field] = Throws[rec].Score.NegatedPossibleScores[field];
+                    dissimilarity[rec, field] = negatedValues[field];
                 }
             }            
 
