@@ -30,10 +30,10 @@ namespace KuhnMunkresCSharp
         private readonly int rows;
         private readonly int cols;
 
-        //used in calculations
-        private int[,] dm_; // MEER
-        private int[,] marked_; // MEER
-        private Point[] points_;
+        //used in calculations -- interesting thing with readonly arrays, the individual elements can be assigned, but the overall object cannot be assigned
+        private readonly int[,] dm_; // MEER
+        private readonly int[,] marked_; // MEER
+        private readonly Point[] points_;
         private int[] is_row_visited_;
         private int[] is_col_visited_;
 
