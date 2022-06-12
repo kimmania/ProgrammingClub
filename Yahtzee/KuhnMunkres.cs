@@ -11,7 +11,9 @@
 // C# Author: Meer Sadeq Billah, sadeqbillah@gmail.com, 2021
 //
 //pulled from https://github.com/sadeqbillah/KuhnMunkres/blob/main/KuhnMunkresCSharp/KuhnMunkresCSharp/Program.cs
-//updated to replace floats with ints
+//updated
+//      to replace floats with ints,
+//      moved some code to class initialziation so that our unknown sized arrays have known sizes
 
 //example of how the algorithm works can be found
 //https://www.hungarianalgorithm.com/solve.php
@@ -24,43 +26,36 @@ namespace KuhnMunkresCSharp
     {
         private const int kStar = 1;
         private const int kPrime = 2;
+        private readonly int n_; //max size for the square matrix (looks at rows and columns)
+        private readonly int rows;
+        private readonly int cols;
 
+        //used in calculations
         private int[,] dm_; // MEER
-
         private int[,] marked_; // MEER
-
         private Point[] points_;
         private int[] is_row_visited_;
         private int[] is_col_visited_;
 
-        private int n_;
-
-        public KuhnMunkres() 
+        public KuhnMunkres(int[,] dissimilarity_matrix) 
         {
-            
-        }
-
-        public int[] Solve(int[,] dissimilarity_matrix)
-        {
-            int min_val = dissimilarity_matrix.Cast<int>().Min();
-
-            int rows = dissimilarity_matrix.GetLength(0);
-            int cols = dissimilarity_matrix.GetLength(1);
+            rows = dissimilarity_matrix.GetLength(0);
+            cols = dissimilarity_matrix.GetLength(1);
 
             n_ = Math.Max(rows, cols);
-
             dm_ = new int[n_, n_];
             marked_ = new int[n_, n_];
-
             points_ = new Point[n_ * 2];
+            is_row_visited_ = new int[n_];
+            is_col_visited_ = new int[n_];
 
             for (int i = 0; i < rows; i++)
                 for (int j = 0; j < cols; j++)
                     dm_[i, j] = dissimilarity_matrix[i, j];
+        }
 
-            is_row_visited_ = new int[n_];
-            is_col_visited_ = new int[n_];
-
+        public int[] Solve()
+        {
             Run();
 
             int[] results = new int[rows];
