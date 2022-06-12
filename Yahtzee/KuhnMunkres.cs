@@ -11,7 +11,10 @@
 // C# Author: Meer Sadeq Billah, sadeqbillah@gmail.com, 2021
 //
 //pulled from https://github.com/sadeqbillah/KuhnMunkres/blob/main/KuhnMunkresCSharp/KuhnMunkresCSharp/Program.cs
-//updated to replace ints with 
+//updated to replace floats with ints
+
+//example of how the algorithm works can be found
+//https://www.hungarianalgorithm.com/solve.php
 
 using System.Drawing;
 
