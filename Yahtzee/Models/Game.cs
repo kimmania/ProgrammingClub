@@ -29,7 +29,6 @@ namespace Yahtzee.Models
             // the score values are shifted to so that the highest values appear as the lowest by taking a single max of 50 and subtracting the actual value
             // the kuhn munkres works by calculating the lowest value possible while assigning all tasks...by negating as above, we are allowing it to work for calculating
             // the highest score possible
-            //todo: is it possible to turn an array of arrays into 2D array?
             for (int rec = 0; rec < 13; rec++)
             {
                 for (int field = 0; field < 13; field++)
