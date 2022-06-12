@@ -21,6 +21,8 @@ namespace Yahtzee.Models
         public int Bonus => (Ones + Twos + Threes + Fours + Fives + Sixes) > 62 ? 35 : 0;
         public int TotalScore => Ones + Twos + Threes + Fours + Fives + Sixes + Chance + ThreeOfKind + FourOfKind + FiveOfKind + ShortStraight + LongStraight + FullHouse + Bonus;
 
+        public Score() { } //this will be used to create the final scoring
+
         /// <summary>
         /// Evaluate a single throw's possible scores
         /// </summary>
