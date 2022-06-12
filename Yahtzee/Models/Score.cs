@@ -3,19 +3,73 @@ namespace Yahtzee.Models
 {
     internal class Score
     {
-        public int Ones { get; set; } = 0;
-        public int Twos { get; set; } = 0;
-        public int Threes { get; set; } = 0;
-        public int Fours { get; set; } = 0;
-        public int Fives { get; set; } = 0;
-        public int Sixes { get; set; } = 0;
-        public int Chance { get; set; } = 0;
-        public int ThreeOfKind { get; set; } = 0;
-        public int FourOfKind { get; set; } = 0;
-        public int FiveOfKind { get; set; } = 0;
-        public int ShortStraight { get; set; } = 0;
-        public int LongStraight { get; set; } = 0;
-        public int FullHouse { get; set; } = 0;
+        public int[] PossibleScores = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        public int[] NegatedPossibleScores => PossibleScores.Select(x => 50 - x).ToArray();
+        public int Ones 
+        { 
+            get => PossibleScores[0]; 
+            set => PossibleScores[0] = value; 
+        }
+        public int Twos
+        {
+            get => PossibleScores[1];
+            set => PossibleScores[1] = value;
+        }
+        public int Threes
+        {
+            get => PossibleScores[2];
+            set => PossibleScores[2] = value;
+        }
+        public int Fours
+        {
+            get => PossibleScores[3];
+            set => PossibleScores[3] = value;
+        }
+        public int Fives
+        {
+            get => PossibleScores[4];
+            set => PossibleScores[4] = value;
+        }
+        public int Sixes
+        {
+            get => PossibleScores[5];
+            set => PossibleScores[5] = value;
+        }
+        public int Chance
+        {
+            get => PossibleScores[6];
+            set => PossibleScores[6] = value;
+        }
+        public int ThreeOfKind
+        {
+            get => PossibleScores[7];
+            set => PossibleScores[7] = value;
+        }
+        public int FourOfKind
+        {
+            get => PossibleScores[8];
+            set => PossibleScores[8] = value;
+        }
+        public int FiveOfKind
+        {
+            get => PossibleScores[9];
+            set => PossibleScores[9] = value;
+        }
+        public int ShortStraight
+        {
+            get => PossibleScores[10];
+            set => PossibleScores[10] = value;
+        }
+        public int LongStraight
+        {
+            get => PossibleScores[11];
+            set => PossibleScores[11] = value;
+        }
+        public int FullHouse
+        {
+            get => PossibleScores[12];
+            set => PossibleScores[12] = value;
+        }
 
         //used for post score
         public int Bonus => (Ones + Twos + Threes + Fours + Fives + Sixes) > 62 ? 35 : 0;
@@ -29,19 +83,20 @@ namespace Yahtzee.Models
         /// <param name="scoreToCopy"></param>
         public Score(Score scoreToCopy) 
         {
-            this.Ones = scoreToCopy.Ones;
-            this.Twos = scoreToCopy.Twos;
-            this.Threes = scoreToCopy.Threes;
-            this.Fours = scoreToCopy.Fours;
-            this.Fives = scoreToCopy.Fives;
-            this.Sixes = scoreToCopy.Sixes;
-            this.Chance = scoreToCopy.Chance;
-            this.ThreeOfKind = scoreToCopy.ThreeOfKind;
-            this.FourOfKind = scoreToCopy.FourOfKind;
-            this.FiveOfKind = scoreToCopy.FiveOfKind;
-            this.ShortStraight = scoreToCopy.ShortStraight;
-            this.LongStraight = scoreToCopy.LongStraight;
-            this.FullHouse = scoreToCopy.FullHouse;
+            //this.Ones = scoreToCopy.Ones;
+            //this.Twos = scoreToCopy.Twos;
+            //this.Threes = scoreToCopy.Threes;
+            //this.Fours = scoreToCopy.Fours;
+            //this.Fives = scoreToCopy.Fives;
+            //this.Sixes = scoreToCopy.Sixes;
+            //this.Chance = scoreToCopy.Chance;
+            //this.ThreeOfKind = scoreToCopy.ThreeOfKind;
+            //this.FourOfKind = scoreToCopy.FourOfKind;
+            //this.FiveOfKind = scoreToCopy.FiveOfKind;
+            //this.ShortStraight = scoreToCopy.ShortStraight;
+            //this.LongStraight = scoreToCopy.LongStraight;
+            //this.FullHouse = scoreToCopy.FullHouse;
+            this.PossibleScores = scoreToCopy.PossibleScores; //does this act as I expect? need to doublecheck
         }
 
         /// <summary>
