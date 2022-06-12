@@ -23,10 +23,7 @@ namespace Yahtzee.Models
         {
             //todo: I haven't analyzed whether this sufficiently accommodates getting the highest score when taking into account a bonus being assigned.
             //      need to determine what sample would create a bonus that would increase an overall total score rather than placing scores elsewhere
-
-            KuhnMunkres kh = new KuhnMunkres();
             int[,] dissimilarity = new int[13, 13];
-
             int rowCount = 0;
             // loop through each throw and set up the values such that
             // the score values are shifted to so that the highest values appear as the lowest by taking a single max of 50 and subtracting the actual value
@@ -49,9 +46,9 @@ namespace Yahtzee.Models
                 dissimilarity[rowCount, 12] = 50 - thrw.Score.FullHouse;
                 ++rowCount;
             };
-
+            KuhnMunkres kh = new KuhnMunkres(dissimilarity);
             //evaluate using the Kuhn Munkres evaluation method to get a listing of valid scores
-            int[] res = kh.Solve(dissimilarity);
+            int[] res = kh.Solve();
             //now generate the final score using the results
             for (int i = 0; i < res.Count(); i++)
             {
