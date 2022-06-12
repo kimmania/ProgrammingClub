@@ -83,20 +83,7 @@ namespace Yahtzee.Models
         /// <param name="scoreToCopy"></param>
         public Score(Score scoreToCopy) 
         {
-            //this.Ones = scoreToCopy.Ones;
-            //this.Twos = scoreToCopy.Twos;
-            //this.Threes = scoreToCopy.Threes;
-            //this.Fours = scoreToCopy.Fours;
-            //this.Fives = scoreToCopy.Fives;
-            //this.Sixes = scoreToCopy.Sixes;
-            //this.Chance = scoreToCopy.Chance;
-            //this.ThreeOfKind = scoreToCopy.ThreeOfKind;
-            //this.FourOfKind = scoreToCopy.FourOfKind;
-            //this.FiveOfKind = scoreToCopy.FiveOfKind;
-            //this.ShortStraight = scoreToCopy.ShortStraight;
-            //this.LongStraight = scoreToCopy.LongStraight;
-            //this.FullHouse = scoreToCopy.FullHouse;
-            this.PossibleScores = scoreToCopy.PossibleScores; //does this act as I expect? need to doublecheck
+            this.PossibleScores = scoreToCopy.PossibleScores;
         }
 
         /// <summary>
