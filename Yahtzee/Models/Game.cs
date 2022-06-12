@@ -21,6 +21,9 @@ namespace Yahtzee.Models
 
         public void EvaluateScores()
         {
+            //todo: I haven't analyzed whether this sufficiently accommodates getting the highest score when taking into account a bonus being assigned.
+            //      need to determine what sample would create a bonus that would increase an overall total score rather than placing scores elsewhere
+
             KuhnMunkres kh = new KuhnMunkres();
             int[,] dissimilarity = new int[13, 13];
 
