@@ -27,6 +27,8 @@ namespace Yahtzee.Models
             int rowCount = 0;
             // loop through each throw and set up the values such that
             // the score values are shifted to so that the highest values appear as the lowest by taking a single max of 50 and subtracting the actual value
+            //the kuhn munkres works by calculating the lowest value possible while assigning all tasks...by negating as above, we are allowing it to work for calculating
+            //the highest score possible
             foreach (var thrw in Throws)
             {
                 dissimilarity[rowCount, 0] = 50 - thrw.Score.Ones;
