@@ -1,0 +1,108 @@
+Results:
+Black: 47
+White: 49
+Tie: 6
+
+Highcard  VS PAIR- WHITE
+Highcard - black
+Highcard - BLACK
+Highcard - WHITE
+HIGHCARD - white
+HIGHCARD - TIE
+PAIR - BLACK
+PAIR - TIE
+PAIR - WHITE
+2 PAIR - BLACK
+2 PAIR - WHITE
+2 PAIR - TIE
+3 of a kind - BLACK
+3 OF A KIND - WHITE
+FULLHOUSE - BLACK
+FULLHOUSE - WHITE
+3 OFKIND VS FULLHOUSE WHITE
+4 KIND - BLACK
+4 KIND - WHITE
+straight - WHITE
+STRAIGHT - BLACK
+straight tie
+FLUSH - BLACK
+FLUSH - WHITE
+FLUSH - WHITE
+FLUSH - TIE
+STRAIGHTFLUSH - BLACK
+STRAIGHTFLUSH - WHITE
+STRAIGHTFLUSH - BLACK
+STRAIGHTFLUSH - TIE
+StraightFlush VS FourOfKind - BLACK
+StraightFlush VS FullHouse - BLACK
+StraightFlush VS Flush - BLACK
+StraightFlush VS Straight - BLACK
+StraightFlush VS ThreeOfKind - BLACK
+StraightFlush VS TwoPair - BLACK
+StraightFlush VS OnePair - BLACK
+StraightFlush VS HighCard - BLACK
+FourOfKind VS FullHouse - BLACK
+FourOfKind VS Flush - BLACK
+FourOfKind VS Straight - BLACK
+FourOfKind VS ThreeOfKind - BLACK
+FourOfKind VS TwoPair - BLACK
+FourOfKind VS OnePair - BLACK
+FourOfKind VS HighCard - BLACK
+FullHouse VS Flush - BLACK
+FullHouse VS Straight - BLACK
+FullHouse VS ThreeOfKind - BLACK
+FullHouse VS TwoPair - BLACK
+FullHouse VS OnePair - BLACK
+FullHouse VS HighCard - BLACK
+Flush VS Straight - BLACK
+Flush VS ThreeOfKind - BLACK
+Flush VS TwoPair - BLACK
+Flush VS OnePair - BLACK
+Flush VS HighCard - BLACK
+Straight VS ThreeOfKind - BLACK
+Straight VS TwoPair - BLACK
+Straight VS OnePair - BLACK
+Straight VS HighCard - BLACK
+ThreeOfKind VS TwoPair - BLACK
+ThreeOfKind VS OnePair - BLACK
+ThreeOfKind VS HighCard - BLACK
+TwoPair VS OnePair - BLACK
+TwoPair VS HighCard - BLACK
+OnePair VS HighCard - BLACK
+FourOfKind VS StraightFlush - WHITE
+FullHouse VS StraightFlush - WHITE
+Flush VS StraightFlush - WHITE
+Straight VS StraightFlush - WHITE
+ThreeOfKind VS StraightFlush - WHITE
+TwoPair VS StraightFlush - WHITE
+OnePair VS StraightFlush - WHITE
+HighCard VS StraightFlush - WHITE
+FullHouse VS FourOfKind - WHITE
+Flush VS FourOfKind - WHITE
+Straight VS FourOfKind - WHITE
+ThreeOfKind VS FourOfKind - WHITE
+TwoPair VS FourOfKind - WHITE
+OnePair VS FourOfKind - WHITE
+HighCard VS FourOfKind - WHITE
+Flush VS FullHouse - WHITE
+Straight VS FullHouse - WHITE
+ThreeOfKind VS FullHouse - WHITE
+TwoPair VS FullHouse - WHITE
+OnePair VS FullHouse - WHITE
+HighCard VS FullHouse - WHITE
+Straight VS Flush - WHITE
+ThreeOfKind VS Flush - WHITE
+TwoPair VS Flush - WHITE
+OnePair VS Flush - WHITE
+HighCard VS Flush - WHITE
+ThreeOfKind VS Straight - WHITE
+TwoPair  VS Straight- WHITE
+OnePair  VS Straight- WHITE
+HighCard  VS Straight- WHITE
+TwoPair VS ThreeOfKind - WHITE
+OnePair VS ThreeOfKind - WHITE
+HighCard VS ThreeOfKind - WHITE
+OnePair VS TwoPair - WHITE
+HighCard VS TwoPair - WHITE
+HighCard VS OnePair- WHITE
+
