@@ -9,3 +9,5 @@ For most of the group gatherings, we would shoot for two goals
 * most creative solution for solving the problem
 
 I frequently invested the time to go for most creative, I enjoyed thinking outside the box.
+
+This eventually turned into exercises just for myself.
