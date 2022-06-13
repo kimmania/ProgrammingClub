@@ -1,0 +1,7 @@
+actor1|1
+actor2|1
+actor3|2
+actor4|3
+actor5|infinity
+actor6|infinity
+Kevin Bacon|0

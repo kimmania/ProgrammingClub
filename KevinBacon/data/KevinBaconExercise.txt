@@ -1,0 +1,10 @@
+Attached zip file contains two folders: RealData and TestData.  The files are named the same between both folders, the TestData just contains a smaller subset of data to write your code against.
+actors.txt - 9,235 actors, 
+movie-actors.txt - 21,370 movie-actor pairs
+movies.txt - 7,067 movies
+
+The files are all formatted the same way.  Each line has two quantities separated by a "|". In the actors file the quantities are actorID and actorName. In the movies file they are movieID and movieName. In the movies-actors file they are movieID and actorID, indicating that the actor associated with actorID appeared in the movie associated with movieID.  You should assume that no movie appears twice in the movies file and that no actor appears twice in the actors file.  Note: opening the files in notepad will not show the line breaks.
+
+Objective:
+Generate the a listing for all actors their Kevin Bacon number.  For comparison, we want the output to be ordered alphabetically with and have the same pattern as the the original files: <actor name>|<kevin bacon number>.  If the actor has no relationship with Kevin Bacon, assume it is infinity.
+
