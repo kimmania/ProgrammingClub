@@ -27,6 +27,7 @@ Problems solved:
 11. PC 110208 Yahtzee
 12. Calcualte Six Degrees of Kevin Bacon (similiar to the Erdos number PC 110206)
     * https://blogs.ams.org/mathgradblog/2013/11/22/degrees-kevin-bacon/
+13. PC 110301 WERTYU
 
 
 Project Euler
