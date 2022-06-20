@@ -6,3 +6,5 @@ foreach (var instance in cases)
 {
     Console.WriteLine(instance.SolveCase());
 }
+
+//todo: evaluate the points for the end letter by using the calculated
