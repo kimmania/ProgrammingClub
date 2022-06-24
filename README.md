@@ -13,7 +13,7 @@ I frequently invested the time to go for most creative, I enjoyed thinking outsi
 This eventually turned into exercises just for myself.
 
 
-Problems solved:
+Problems solved from "Programming Challenges: The Programming Contest Training Manual":
 1. PC 110101 The 3n + 1 Problem
 2. PC 110102 Minesweeper
 3. PC 110104 LCD Display
@@ -27,12 +27,16 @@ Problems solved:
 11. PC 110208 Yahtzee
 12. Calcualte Six Degrees of Kevin Bacon (similiar to the Erdos number PC 110206)
     * https://blogs.ams.org/mathgradblog/2013/11/22/degrees-kevin-bacon/
+    * used the Kevin Bacon stuff as I could pull data to test against where as finding raw data for Erdos was problematic
 13. PC 110301 WERTYU
 14. PC 110302 Where's Waldorf
+15. PC 110303 Common Permutation
 
 
-Project Euler
+Project Euler in `ProjectEuler`
 1. Project Euler 18/67 - MaxSumPath
 1. Solving Euler's Square - SumOfDiagonals
 1. Project Euler 16
 
+
+Content in `PC_GroupResults` are the results from the individual results from participants in the group showcase.
