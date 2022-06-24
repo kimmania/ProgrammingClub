@@ -29,6 +29,7 @@ Problems solved:
     * https://blogs.ams.org/mathgradblog/2013/11/22/degrees-kevin-bacon/
 13. PC 110301 WERTYU
 14. PC 110302 Where's Waldorf
+15. PC 110303 Common Permutation
 
 
 Project Euler
