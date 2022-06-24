@@ -28,6 +28,7 @@ Problems solved:
 12. Calcualte Six Degrees of Kevin Bacon (similiar to the Erdos number PC 110206)
     * https://blogs.ams.org/mathgradblog/2013/11/22/degrees-kevin-bacon/
 13. PC 110301 WERTYU
+14. PC 110302 Where's Waldorf
 
 
 Project Euler
