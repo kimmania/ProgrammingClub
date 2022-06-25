@@ -31,13 +31,14 @@ Problems solved from "Programming Challenges: The Programming Contest Training M
 13. PC 110301 WERTYU
 14. PC 110302 Where's Waldorf
 15. PC 110303 Common Permutation
+16. PC 110304 Crypt Kicker II
+
 
 Downloaded instructions waiting to be solved:
-1. PC 110304 Crypt Kicker II
-2. PC 110305 Automated Judge Script
-3. PC 110306 File Fragmentation
-4. PC 110307 Doublets
-5. PC 110308 Fmt
+1. PC 110305 Automated Judge Script
+1. PC 110306 File Fragmentation
+1. PC 110307 Doublets
+1. PC 110308 Fmt
 
 
 Project Euler in `ProjectEuler`
