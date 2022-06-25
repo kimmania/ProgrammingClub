@@ -39,6 +39,7 @@ Downloaded instructions waiting to be solved:
 1. PC 110306 File Fragmentation
 1. PC 110307 Doublets
 1. PC 110308 Fmt
+1. Revisit Crypt Kicker II and approach it with given a key, find a corresponding pattern for the translation to then be used...ie, build the rules of verification/mapping
 
 
 Project Euler in `ProjectEuler`
