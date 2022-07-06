@@ -32,10 +32,10 @@ Problems solved from "Programming Challenges: The Programming Contest Training M
 14. PC 110302 Where's Waldorf
 15. PC 110303 Common Permutation
 16. PC 110304 Crypt Kicker II
+17. PC 110305 Automated Judge Script
 
 
 Downloaded instructions waiting to be solved:
-1. PC 110305 Automated Judge Script
 1. PC 110306 File Fragmentation
 1. PC 110307 Doublets
 1. PC 110308 Fmt
