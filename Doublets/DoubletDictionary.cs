@@ -123,9 +123,12 @@
                             {
                                 if (wordsToCheck.Contains(finish))
                                 {
-                                    //we have found the word, set the solution
-                                    solution = new List<string>(currentAnalysis.CurrentWordStack);
-                                    solution.Add(finish);
+                                    if (solution.Count == 0 ||  solution.Count > currentAnalysis.CurrentWordStack.Count + 1)
+                                    {
+                                        //we have found the word, set the solution
+                                        solution = new List<string>(currentAnalysis.CurrentWordStack);
+                                        solution.Add(finish);    
+                                    }
                                     currentPath.Pop();
                                 }
                                 else
