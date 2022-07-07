@@ -73,13 +73,14 @@
 
             //test for the simplest case first
             if (DictionaryOfWords[start].Intersect(DictionaryOfWords[finish]).Any())
-                return $"{start}\n{finish}\n\n";
+                return $"{start}\n{finish}\n";
 
             List<string> solution = new List<string>();
             Dictionary<string, int> wordsAlreadySeen = new Dictionary<string, int>();
             Dictionary<string, int> patternsAlreadyReviewed = new Dictionary<string, int>();
             Stack<Analysis> currentPath = new Stack<Analysis>();
             currentPath.Push(new Analysis(start, DictionaryOfWords[start]));
+            wordsAlreadySeen.Add(start, 0);
 
             do
             {
