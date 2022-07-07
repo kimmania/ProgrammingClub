@@ -18,7 +18,7 @@ dictionary.InitializeDictionary(reader);
 //I can test individual words prior to reviewing all
 //Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("booster roasted"));
 
-Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("beer roof"));
+//Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("beer roof"));
 //Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("a z"));
 //Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("abase agave"));
 //Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("abash agave"));
@@ -37,9 +37,9 @@ Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("beer roof"));
 //Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("quack runic"));
 //Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("belch jowly"));
 
-//int test = 1;
-//while (!reader.EndOfStream)
-//{
-//    Console.WriteLine($"Test #{test++}:");
-//    Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet(reader.ReadLine()));
-//}
+int test = 1;
+while (!reader.EndOfStream)
+{
+    Console.WriteLine($"Test #{test++}:");
+    Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet(reader.ReadLine()));
+}

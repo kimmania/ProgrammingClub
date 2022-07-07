@@ -85,7 +85,12 @@
             do
             {
                 var currentAnalysis = currentPath.Peek();
-                if (currentAnalysis.IsLoopingWords)
+
+                if (solution.Count > 0 && currentAnalysis.Depth > solution.Count)
+                {
+                    currentPath.Pop();
+                }
+                else if (currentAnalysis.IsLoopingWords)
                 {
                     foreach (var word in currentAnalysis.GetNextWord())
                     {
@@ -123,11 +128,11 @@
                             {
                                 if (wordsToCheck.Contains(finish))
                                 {
-                                    if (solution.Count == 0 ||  solution.Count > currentAnalysis.CurrentWordStack.Count + 1)
+                                    if (solution.Count == 0 || solution.Count > currentAnalysis.CurrentWordStack.Count + 1)
                                     {
                                         //we have found the word, set the solution
                                         solution = new List<string>(currentAnalysis.CurrentWordStack);
-                                        solution.Add(finish);    
+                                        solution.Add(finish);
                                     }
                                     currentPath.Pop();
                                 }
@@ -141,7 +146,11 @@
                         }
                     }
 
-                    if(currentAnalysis.IsLoopingWords == false && currentPath.Count > 0 && currentPath.Peek().Depth == currentAnalysis.Depth)
+                    if (
+                        currentPath.Count > 0 &&
+                        currentAnalysis.IsLoopingWords == false &&
+                        currentPath.Peek().Depth == currentAnalysis.Depth
+                    )
                         //make sure we are still looking at the same level, and we have finished all there is with this level
                         currentPath.Pop();
                 }
