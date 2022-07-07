@@ -33,11 +33,11 @@ Problems solved from "Programming Challenges: The Programming Contest Training M
 15. PC 110303 Common Permutation
 16. PC 110304 Crypt Kicker II
 17. PC 110305 Automated Judge Script
+18. PC 110307 Doublets
 
 
 Downloaded instructions waiting to be solved:
 1. PC 110306 File Fragmentation
-1. PC 110307 Doublets
 1. PC 110308 Fmt
 1. Revisit Crypt Kicker II and approach it with given a key, find a corresponding pattern for the translation to then be used...ie, build the rules of verification/mapping
 
