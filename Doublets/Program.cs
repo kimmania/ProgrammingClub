@@ -12,10 +12,13 @@ using Doublets;
 var fileName = @"./DataFiles/Test1/Input.txt";
 var dictionary = new DoubletDictionary();
 using StreamReader reader = new StreamReader(fileName);
-dictionary.LoadDictionary(reader);
+dictionary.InitializeDictionary(reader);
 
 
-while(!reader.EndOfStream)
+//I can test individual words prior to reviewing all
+//Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("booster roasted"));
+
+while (!reader.EndOfStream)
 {
     Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet(reader.ReadLine()));
 }
