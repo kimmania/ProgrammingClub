@@ -2,11 +2,16 @@
 {
     internal class DoubletDictionary
     {
-        private Dictionary<string, List<string>> DictionaryOfWords = new Dictionary<string, List<string>>();
-        private Dictionary<string, List<string>> DictionaryOfPatterns = new Dictionary<string, List<string>>();
+        private Dictionary<string, List<string>> DictionaryOfWords = new Dictionary<string, List<string>>();  // word, list of patterns
+        private Dictionary<string, List<string>> DictionaryOfPatterns = new Dictionary<string, List<string>>(); //pattern, list of words
 
+        //empty class instantiator
         public DoubletDictionary() { }
 
+        /// <summary>
+        /// Initialize the dictionary using a stream reader
+        /// </summary>
+        /// <param name="reader"></param>
         public void InitializeDictionary(StreamReader reader)
         {
             var shouldExit = false;
@@ -19,9 +24,12 @@
                     break;
                 }
                 List<string> patterns = new List<string>();
-                //ensure we haven't see the word yet
+                //ensure we haven't see the word yet in case there are duplicates
                 if (DictionaryOfWords.TryAdd(line, patterns))
                 {
+                    //then for the word, create a pattern for the number of letters in the word, with each one replacing a single letter with a period
+                    //example: try
+                    //becomes: .rt    t.y     tr.
                     for (int i = 0; i < line.Length; i++)
                     {
                         string pattern = $"{(i == 0 ? "" : line.Substring(0, i))}.{line.Substring(i + 1)}";
@@ -39,6 +47,11 @@
             }
         }
 
+        /// <summary>
+        /// Simple pass along that parses for two words to process
+        /// </summary>
+        /// <param name="doubletToParse"></param>
+        /// <returns></returns>
         public string DetermineShortestSequenceToDoublet(string doubletToParse)
         {
             if (string.IsNullOrWhiteSpace(doubletToParse))
@@ -51,6 +64,12 @@
             return DetermineShortestSequenceToDoublet(split[0], split[1]);
         }
 
+        /// <summary>
+        /// Main algorithm to determine the shorest doublet for the pair of words. More than one solution is possible, this stops with the first shortest found
+        /// </summary>
+        /// <param name="start"></param>
+        /// <param name="finish"></param>
+        /// <returns></returns>
         public string DetermineShortestSequenceToDoublet(string start, string finish)
         {
             //objective: need to find the shortest sequence, not just the first sequence
@@ -159,65 +178,6 @@
             if (solution.Count > 0)
                 return $"{string.Join("\n", solution)}\n";
             return "No solution.\n";
-        }
-
-        internal class Analysis
-        {
-            public int Depth { get; private set; }
-            public List<string> CurrentWordStack { get; private set; }
-            private List<string> Patterns { get; set; }
-            private List<string> WordsToProcess { get; set; }
-
-            public bool IsLoopingWords {get; private set; }
-
-            public Analysis(string currentWord, List<string> patterns)
-            {
-                Depth = 1;
-                CurrentWordStack = new List<string> { currentWord };
-                Patterns = new List<string>(patterns);
-            }
-
-            public Analysis(Analysis existing, string newWord, List<string> patterns)
-            {
-                Depth = existing.Depth + 1;
-                CurrentWordStack = new List<string>(existing.CurrentWordStack);
-                CurrentWordStack.Add(newWord);
-                Patterns = new List<string>(patterns);
-            }
-
-            public IEnumerable<string> GetNextPattern()
-            {
-                foreach (var item in Patterns)
-                {
-                    yield return item;
-                }
-            }
-
-            public void LoadWords(List<string> words)
-            {
-                WordsToProcess = new List<string>();
-                foreach (var word in words)
-                {
-                    if (CurrentWordStack.Contains(word) == false)
-                        //skip the words we have already seen (avoids an infinite loop
-                        WordsToProcess.Add(word);
-                }
-
-                IsLoopingWords = WordsToProcess.Count > 0 ? true : false;
-            }
-
-            public IEnumerable<string> GetNextWord()
-            {
-                int maxIterations = WordsToProcess.Count - 1;
-                for (int i = 0; i < WordsToProcess.Count; i++)
-                {
-                    if (i == maxIterations)
-                        //revert back to looping the patterns
-                        IsLoopingWords = false;
-
-                    yield return WordsToProcess[i];
-                }
-            }
         }
     }
 }

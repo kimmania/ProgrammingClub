@@ -2,6 +2,9 @@
 /*
  * Steps to complete:
  * 1. Load dictionary by processing words into meaningful arrangements
+ *    a. Dictionary of words that point to the possible matching patterns; # patterns = # of letters, with each instance having one letter replaced with a period
+ *    b. Dictionary of patterns that point to the matching words
+ *    c. Clean out any record in the dictionary of patterns that only has one word to match as these are useless for this exercise
  * 2. Loop over pairs of words
  *    a. Process for possible solutions
 */
@@ -16,8 +19,6 @@ dictionary.InitializeDictionary(reader);
 
 
 //I can test individual words prior to reviewing all
-//Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("booster roasted"));
-
 //Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("beer roof"));
 //Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("a z"));
 //Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("abase agave"));
