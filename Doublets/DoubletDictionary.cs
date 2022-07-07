@@ -72,10 +72,11 @@
                 return "No solution.\n";
 
             //test for the simplest case first
-            //if (DictionaryOfWords[start].Intersect(DictionaryOfWords[finish]).Any())
-            //    return $"{start}\n{finish}\n\n";
+            if (DictionaryOfWords[start].Intersect(DictionaryOfWords[finish]).Any())
+                return $"{start}\n{finish}\n\n";
 
             List<string> solution = new List<string>();
+            Dictionary<string, int> wordsAlreadySeen = new Dictionary<string, int>();
             Dictionary<string, int> patternsAlreadyReviewed = new Dictionary<string, int>();
             Stack<Analysis> currentPath = new Stack<Analysis>();
             currentPath.Push(new Analysis(start, DictionaryOfWords[start]));
@@ -85,18 +86,19 @@
                 var currentAnalysis = currentPath.Peek();
                 if (currentAnalysis.IsLoopingWords)
                 {
-                    //var nextAnalysis = new Analysis(currentAnalysis.Depth + 1, currentAnalysis.CurrentWordStack);
                     foreach (var word in currentAnalysis.GetNextWord())
                     {
+                        if (wordsAlreadySeen.ContainsKey(word) && wordsAlreadySeen[word] <= currentAnalysis.Depth)
+                            //no point in checking out further, we already know this leads to something wrong
+                            continue;
+
+                        if (wordsAlreadySeen.TryAdd(word, currentAnalysis.Depth) == false)
+                            wordsAlreadySeen[word] = currentAnalysis.Depth;
+
                         if (DictionaryOfWords.ContainsKey(word))
                         {
                             currentPath.Push(new Analysis(currentAnalysis, word, DictionaryOfWords[word]));
                             break;
-                        }
-                        else
-                        {
-                            //move on, this was a bad word
-                            continue;
                         }
                     }
                     //when we hit the end of words, the flag automatically gets flipped for IsLoopingWords, so we can continue one with the do loop
@@ -112,7 +114,7 @@
                         }
                         else
                         {
-                            if (patternsAlreadyReviewed.TryAdd(pattern, currentAnalysis.Depth))
+                            if (patternsAlreadyReviewed.TryAdd(pattern, currentAnalysis.Depth) == false)
                                 patternsAlreadyReviewed[pattern] = currentAnalysis.Depth;
 
                             //going to look through the patterns to start processing words
