@@ -1,6 +1,6 @@
 ﻿using FileFragmentation;
 
-var sets = StaticUtilities.LoadCasesFromFile("./DataFiles/Test3/Input.txt");
+var sets = StaticUtilities.LoadCasesFromFile("./DataFiles/Test1/Input.txt");
 
 foreach (var set in sets)
 {
