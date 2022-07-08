@@ -29,7 +29,7 @@
                 {
                     //then for the word, create a pattern for the number of letters in the word, with each one replacing a single letter with a period
                     //example: try
-                    //becomes: .rt    t.y     tr.
+                    //becomes: .ry    t.y     tr.
                     for (int i = 0; i < line.Length; i++)
                     {
                         string pattern = $"{(i == 0 ? "" : line.Substring(0, i))}.{line.Substring(i + 1)}";
