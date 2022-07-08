@@ -47,137 +47,20 @@
             }
         }
 
-        /// <summary>
-        /// Simple pass along that parses for two words to process
-        /// </summary>
-        /// <param name="doubletToParse"></param>
-        /// <returns></returns>
-        public string DetermineShortestSequenceToDoublet(string doubletToParse)
+        public List<string> GetPatternsForWord(string value)
         {
-            if (string.IsNullOrWhiteSpace(doubletToParse))
-                return "";
+            if (DictionaryOfWords.TryGetValue(value, out List<string> result))
+                return result;
 
-            var split = doubletToParse.Split(' ');
-            if (split.Length != 2)
-                return "No solution.\n";
-
-            return DetermineShortestSequenceToDoublet(split[0], split[1]);
+            return new List<string>();
         }
 
-        /// <summary>
-        /// Main algorithm to determine the shorest doublet for the pair of words. More than one solution is possible, this stops with the first shortest found
-        /// </summary>
-        /// <param name="start"></param>
-        /// <param name="finish"></param>
-        /// <returns></returns>
-        public string DetermineShortestSequenceToDoublet(string start, string finish)
+        public List<string> GetWordsForPattern(string value)
         {
-            //objective: need to find the shortest sequence, not just the first sequence
+            if (DictionaryOfPatterns.TryGetValue(value, out List<string> result))
+                return result;
 
-            if (start == finish)
-                return $"{start}\n";
-
-            //No solution
-            //  if either word is null or empty
-            //  length of words do not match (have no way to get to a match)
-            //  either word not in the dictionary of words
-            if (
-                string.IsNullOrWhiteSpace(start) ||
-                string.IsNullOrWhiteSpace(finish) || 
-                start.Length != finish.Length ||
-                DictionaryOfWords.ContainsKey(start) == false ||
-                DictionaryOfWords.ContainsKey(finish) == false
-            )
-                return "No solution.\n";
-
-            //test for the simplest case first
-            if (DictionaryOfWords[start].Intersect(DictionaryOfWords[finish]).Any())
-                return $"{start}\n{finish}\n";
-
-            List<string> solution = new List<string>();
-            Dictionary<string, int> wordsAlreadySeen = new Dictionary<string, int>();
-            Dictionary<string, int> patternsAlreadyReviewed = new Dictionary<string, int>();
-            Stack<Analysis> currentPath = new Stack<Analysis>();
-            currentPath.Push(new Analysis(start, DictionaryOfWords[start]));
-            wordsAlreadySeen.Add(start, 0);
-
-            do
-            {
-                var currentAnalysis = currentPath.Peek();
-
-                if (solution.Count > 0 && currentAnalysis.Depth > solution.Count)
-                {
-                    currentPath.Pop();
-                }
-                else if (currentAnalysis.IsLoopingWords)
-                {
-                    foreach (var word in currentAnalysis.GetNextWord())
-                    {
-                        if (wordsAlreadySeen.ContainsKey(word) && wordsAlreadySeen[word] <= currentAnalysis.Depth)
-                            //no point in checking out further, we already know this leads to something wrong
-                            continue;
-
-                        if (wordsAlreadySeen.TryAdd(word, currentAnalysis.Depth) == false)
-                            wordsAlreadySeen[word] = currentAnalysis.Depth;
-
-                        if (DictionaryOfWords.ContainsKey(word))
-                        {
-                            currentPath.Push(new Analysis(currentAnalysis, word, DictionaryOfWords[word]));
-                            break;
-                        }
-                    }
-                    //when we hit the end of words, the flag automatically gets flipped for IsLoopingWords, so we can continue one with the do loop
-                }
-                else
-                {
-                    foreach (var pattern in currentAnalysis.GetNextPattern())
-                    {
-                        if (patternsAlreadyReviewed.ContainsKey(pattern) && patternsAlreadyReviewed[pattern] <= currentAnalysis.Depth)
-                        {
-                            //skip as the results will end up being as long or longer, and not a solution we would use
-                            continue;
-                        }
-                        else
-                        {
-                            if (patternsAlreadyReviewed.TryAdd(pattern, currentAnalysis.Depth) == false)
-                                patternsAlreadyReviewed[pattern] = currentAnalysis.Depth;
-
-                            //going to look through the patterns to start processing words
-                            if (DictionaryOfPatterns.TryGetValue(pattern, out List<string> wordsToCheck))
-                            {
-                                if (wordsToCheck.Contains(finish))
-                                {
-                                    if (solution.Count == 0 || solution.Count > currentAnalysis.CurrentWordStack.Count + 1)
-                                    {
-                                        //we have found the word, set the solution
-                                        solution = new List<string>(currentAnalysis.CurrentWordStack);
-                                        solution.Add(finish);
-                                    }
-                                    currentPath.Pop();
-                                }
-                                else
-                                {
-                                    //prepare for the processing of the pattern's words
-                                    currentAnalysis.LoadWords(wordsToCheck);
-                                }
-                                break;
-                            }
-                        }
-                    }
-
-                    if (
-                        currentPath.Count > 0 &&
-                        currentAnalysis.IsLoopingWords == false &&
-                        currentPath.Peek().Depth == currentAnalysis.Depth
-                    )
-                        //make sure we are still looking at the same level, and we have finished all there is with this level
-                        currentPath.Pop();
-                }
-            } while (currentPath.Count > 0);
-
-            if (solution.Count > 0)
-                return $"{string.Join("\n", solution)}\n";
-            return "No solution.\n";
+            return new List<string>();
         }
     }
 }

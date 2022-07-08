@@ -19,28 +19,28 @@ dictionary.InitializeDictionary(reader);
 
 
 //I can test individual words prior to reviewing all
-//Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("beer roof"));
-//Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("a z"));
-//Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("abase agave"));
-//Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("abash agave"));
-//Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("abbe quay"));
-//Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("acorn runic"));
-//Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("adobe runic"));
-//Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("aloud runic"));
-//Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("badge runic"));
-//Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("barge runic"));
-//Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("barre runic"));
-//Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("runic badge"));
-//Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("quack belch"));
-//Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("belch quack"));
-//Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("belie quack"));
-//Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("comic quack"));
-//Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("quack runic"));
-//Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet("belch jowly"));
+//Console.WriteLine((new DoubletProcessor(dictionary, "beer roof").ProcessDoublet()));
+//Console.WriteLine((new DoubletProcessor(dictionary, "a z").ProcessDoublet()));
+//Console.WriteLine((new DoubletProcessor(dictionary, "abase agave").ProcessDoublet()));
+//Console.WriteLine((new DoubletProcessor(dictionary, "abash agave").ProcessDoublet()));
+//Console.WriteLine((new DoubletProcessor(dictionary, "abbe quay").ProcessDoublet()));
+//Console.WriteLine((new DoubletProcessor(dictionary, "acorn runic").ProcessDoublet()));
+//Console.WriteLine((new DoubletProcessor(dictionary, "adobe runic").ProcessDoublet()));
+//Console.WriteLine((new DoubletProcessor(dictionary, "aloud runic").ProcessDoublet()));
+//Console.WriteLine((new DoubletProcessor(dictionary, "badge runic").ProcessDoublet()));
+//Console.WriteLine((new DoubletProcessor(dictionary, "barge runic").ProcessDoublet()));
+//Console.WriteLine((new DoubletProcessor(dictionary, "barre runic").ProcessDoublet()));
+//Console.WriteLine((new DoubletProcessor(dictionary, "runic badge").ProcessDoublet()));
+//Console.WriteLine((new DoubletProcessor(dictionary, "quack belch").ProcessDoublet()));
+//Console.WriteLine((new DoubletProcessor(dictionary, "belch quack").ProcessDoublet()));
+//Console.WriteLine((new DoubletProcessor(dictionary, "belie quack").ProcessDoublet()));
+//Console.WriteLine((new DoubletProcessor(dictionary, "comic quack").ProcessDoublet()));
+//Console.WriteLine((new DoubletProcessor(dictionary, "quack runic").ProcessDoublet()));
+//Console.WriteLine((new DoubletProcessor(dictionary, "belch jowly").ProcessDoublet()));
 
 int test = 1;
 while (!reader.EndOfStream)
 {
     Console.WriteLine($"Test #{test++}:");
-    Console.WriteLine(dictionary.DetermineShortestSequenceToDoublet(reader.ReadLine()));
+    Console.WriteLine((new DoubletProcessor(dictionary, reader.ReadLine()).ProcessDoublet()));
 }
