@@ -14,7 +14,7 @@ This eventually turned into exercises just for myself.
 
 
 Problems solved from "Programming Challenges: The Programming Contest Training Manual":
-1. PC 110101 The 3n + 1 Problem
+1. [PC 110101 The 3n + 1 Problem](3n%2B1)
 2. PC 110102 Minesweeper
 3. PC 110104 LCD Display
 4. PC 110105 Graphical Editor
@@ -34,10 +34,10 @@ Problems solved from "Programming Challenges: The Programming Contest Training M
 16. PC 110304 Crypt Kicker II
 17. PC 110305 Automated Judge Script
 18. PC 110307 Doublets
+19. PC 110306 File Fragmentation
 
 
 Downloaded instructions waiting to be solved:
-1. PC 110306 File Fragmentation
 1. PC 110308 Fmt
 1. Revisit Crypt Kicker II and approach it with given a key, find a corresponding pattern for the translation to then be used...ie, build the rules of verification/mapping
 
