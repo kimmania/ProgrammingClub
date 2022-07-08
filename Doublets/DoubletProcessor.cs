@@ -49,6 +49,7 @@
             if (Processed)
                 return Result;
 
+            //this is essentially building a recursive method but managing the recursion within the Analysis class instead of passing parameters into recursive methods
             do
             {
                 var currentAnalysis = CurrentPath.Peek();
@@ -59,61 +60,12 @@
                 }
                 else if (currentAnalysis.IsLoopingWords)
                 {
-                    foreach (var word in currentAnalysis.GetNextWord())
-                    {
-                        if (WordsAlreadySeen.ContainsKey(word) && WordsAlreadySeen[word] <= currentAnalysis.Depth)
-                            //no point in checking out further, we already know this leads to something wrong
-                            continue;
-
-                        if (WordsAlreadySeen.TryAdd(word, currentAnalysis.Depth) == false)
-                            WordsAlreadySeen[word] = currentAnalysis.Depth;
-
-                        var patterns = DoubletDict.GetPatternsForWord(word);
-                        if (patterns.Count > 0)
-                        {
-                            CurrentPath.Push(new Analysis(currentAnalysis, word, patterns));
-                            break;
-                        }
-                    }
+                    ProcessWords(currentAnalysis);
                     //when we hit the end of words, the flag automatically gets flipped for IsLoopingWords, so we can continue one with the do loop
                 }
                 else
                 {
-                    foreach (var pattern in currentAnalysis.GetNextPattern())
-                    {
-                        if (PatternsAlreadyReviewed.ContainsKey(pattern) && PatternsAlreadyReviewed[pattern] <= currentAnalysis.Depth)
-                        {
-                            //skip as the results will end up being as long or longer, and not a Solution we would use
-                            continue;
-                        }
-                        else
-                        {
-                            if (PatternsAlreadyReviewed.TryAdd(pattern, currentAnalysis.Depth) == false)
-                                PatternsAlreadyReviewed[pattern] = currentAnalysis.Depth;
-
-                            //going to look through the patterns to start processing words
-                            var wordsToCheck = DoubletDict.GetWordsForPattern(pattern);
-                            if (wordsToCheck.Count > 0)
-                            {
-                                if (wordsToCheck.Contains(Finish))
-                                {
-                                    if (Solution.Count == 0 || Solution.Count > currentAnalysis.CurrentWordStack.Count + 1)
-                                    {
-                                        //we have found the word, set the Solution
-                                        Solution = new List<string>(currentAnalysis.CurrentWordStack);
-                                        Solution.Add(Finish);
-                                    }
-                                    CurrentPath.Pop();
-                                }
-                                else
-                                {
-                                    //prepare for the processing of the pattern's words
-                                    currentAnalysis.LoadWords(wordsToCheck);
-                                }
-                                break;
-                            }
-                        }
-                    }
+                    ProcesPatterns(currentAnalysis);
 
                     if (
                         CurrentPath.Count > 0 &&
@@ -128,6 +80,65 @@
             if (Solution.Count > 0)
                 return $"{string.Join("\n", Solution)}\n";
             return "No Solution.\n";
+        }
+
+        private void ProcesPatterns(Analysis currentAnalysis)
+        {
+            foreach (var pattern in currentAnalysis.GetNextPattern())
+            {
+                if (PatternsAlreadyReviewed.ContainsKey(pattern) && PatternsAlreadyReviewed[pattern] <= currentAnalysis.Depth)
+                {
+                    //skip as the results will end up being as long or longer, and not a Solution we would use
+                    continue;
+                }
+                else
+                {
+                    if (PatternsAlreadyReviewed.TryAdd(pattern, currentAnalysis.Depth) == false)
+                        PatternsAlreadyReviewed[pattern] = currentAnalysis.Depth;
+
+                    //going to look through the patterns to start processing words
+                    var wordsToCheck = DoubletDict.GetWordsForPattern(pattern);
+                    if (wordsToCheck.Count > 0)
+                    {
+                        if (wordsToCheck.Contains(Finish))
+                        {
+                            if (Solution.Count == 0 || Solution.Count > currentAnalysis.CurrentWordStack.Count + 1)
+                            {
+                                //we have found the word, set the Solution
+                                Solution = new List<string>(currentAnalysis.CurrentWordStack);
+                                Solution.Add(Finish);
+                            }
+                            CurrentPath.Pop();
+                        }
+                        else
+                        {
+                            //prepare for the processing of the pattern's words
+                            currentAnalysis.LoadWords(wordsToCheck);
+                        }
+                        break;
+                    }
+                }
+            }
+        }
+
+        private void ProcessWords(Analysis currentAnalysis)
+        {
+            foreach (var word in currentAnalysis.GetNextWord())
+            {
+                if (WordsAlreadySeen.ContainsKey(word) && WordsAlreadySeen[word] <= currentAnalysis.Depth)
+                    //no point in checking out further, we already know this leads to something wrong
+                    continue;
+
+                if (WordsAlreadySeen.TryAdd(word, currentAnalysis.Depth) == false)
+                    WordsAlreadySeen[word] = currentAnalysis.Depth;
+
+                var patterns = DoubletDict.GetPatternsForWord(word);
+                if (patterns.Count > 0)
+                {
+                    CurrentPath.Push(new Analysis(currentAnalysis, word, patterns));
+                    break;
+                }
+            }
         }
 
         private void PerformInitialAssessmentAndSetup()
