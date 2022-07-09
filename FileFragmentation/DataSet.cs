@@ -38,6 +38,8 @@ namespace FileFragmentation
             if (possibleResults.Count == 1)
                 return possibleResults.First().Key;
 
+            //based on loading the above, those are the only possible solutions,
+            //so really, below, we just need to track the new ones matching the existing sets
             for (int groupingIndex = ++minLength; groupingIndex <= --maxLength; groupingIndex++)
             {
                 var lowerValues = groupedBySize[groupingIndex].ToList();
@@ -56,14 +58,12 @@ namespace FileFragmentation
                         }
 
                         var first = $"{min}{max}";
-                        if (possibleResults.TryAdd(first, 1) == false)
+                        if (possibleResults.ContainsKey(first))
                             possibleResults[first]++;
 
                         var second = $"{max}{min}";
-                        if (first != second)
-                            if (possibleResults.TryAdd(second, 1) == false)
-                                possibleResults[second]++;
-                        
+                        if (first != second &&possibleResults.ContainsKey(second))
+                            possibleResults[second]++;   
                     }
                 }
             }
