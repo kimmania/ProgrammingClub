@@ -4,6 +4,8 @@ namespace FileFragmentation
     internal class DataSet
     {
         private readonly List<string> Data;
+        private Dictionary<string, int> possibleResults = new Dictionary<string, int>();
+
         public DataSet(List<string> data) => Data = data;
 
         public string Defrag()
@@ -17,21 +19,14 @@ namespace FileFragmentation
 
             var minLength = groupedBySize.Min(x => x.Key);
             var maxLength = groupedBySize.Max(x => x.Key);
-            var expectedLength = minLength + maxLength;
 
-            Dictionary<string, int> possibleResults = new Dictionary<string, int>();
             //add all combinations for the shortest and the longest
             foreach (var min in groupedBySize[minLength])
             {
                 foreach (var max in groupedBySize[maxLength])
                 {
-                    var first = $"{min}{max}";
-                    if (possibleResults.TryAdd(first, 1) == false)
-                        possibleResults[first]++;
-
-                    var second = $"{max}{min}";
-                    if (possibleResults.TryAdd(second, 1) == false)
-                        possibleResults[second]++;
+                    AddToPossibleSolutions(min, max);
+                    AddToPossibleSolutions(max, min);
                 }
             }
 
@@ -42,12 +37,17 @@ namespace FileFragmentation
             //so really, below, we just need to track the new ones matching the existing sets
             for (int groupingIndex = ++minLength; groupingIndex <= --maxLength; groupingIndex++)
             {
+                if (groupedBySize[groupingIndex] == null)
+                    //this presumed bucket doesn't exist, so move on to the next pairing to evaluate
+                    continue;
+
                 var lowerValues = groupedBySize[groupingIndex].ToList();
                 var upperValues = groupedBySize[maxLength].ToList();
+
                 //looping over the groups
-                for (int lowerValueIndex = 0; lowerValueIndex < lowerValues.Count(); lowerValueIndex++)
+                for (int lowerValueIndex = 0; lowerValueIndex < lowerValues.Count; lowerValueIndex++)
                 {
-                    for (int upperValueIndex = 0; upperValueIndex < upperValues.Count(); upperValueIndex++)
+                    for (int upperValueIndex = 0; upperValueIndex < upperValues.Count; upperValueIndex++)
                     {
                         var min = lowerValues[lowerValueIndex];
                         var max = upperValues[upperValueIndex];
@@ -57,11 +57,11 @@ namespace FileFragmentation
                             continue;
                         }
 
-                        var first = $"{min}{max}";
+                        var first = Match(min, max);
                         if (possibleResults.ContainsKey(first))
                             possibleResults[first]++;
 
-                        var second = $"{max}{min}";
+                        var second = Match(max, min);
                         if (first != second &&possibleResults.ContainsKey(second))
                             possibleResults[second]++;   
                     }
@@ -70,5 +70,14 @@ namespace FileFragmentation
 
             return possibleResults.OrderByDescending(x => x.Value).First().Key;
         }
+
+        private void AddToPossibleSolutions(string min, string max)
+        {
+            var value = Match(min, max);
+            if (possibleResults.ContainsKey(value) == false)
+                possibleResults.Add(value, 1);
+        }
+
+        private string Match(string first, string last) => $"{first}{last}";
     }
 }
