@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Net.Sockets;
+using System.Text;
 
 namespace fmt
 {
@@ -28,13 +29,18 @@ namespace fmt
 
         public string Format()
         {
-            string lineToWrite = string.Empty;
-
-            foreach (var line in Content)
+            //ensure we have something to process
+            if (Content.Count > 0)
             {
-                
-            }
+                StringBuilder lineToWrite = new StringBuilder(72);
+                int currentLine = 0;
+                int maxLine = Content.Count - 1;
 
+                while (currentLine <= maxLine)
+                {
+                    
+                }
+            }
             return Output.ToString();
         }
     }
