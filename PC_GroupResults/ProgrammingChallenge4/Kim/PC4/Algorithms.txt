@@ -1,0 +1,34 @@
+WIP
+
+Need to create a faster way to cast the strings to ints
+	IntParseFast() is faster than Convert.ToInt32() over a million attempts -- ~8 milliseconds
+	Found this: http://stackoverflow.com/questions/638496/what-is-fastest-int-convert-toint32x-or-int32-parsex
+		added 
+		public static int IntParseFast(string value)
+		{
+			int result = 0;
+			for (int i = 0; i < value.Length; i++)
+			{
+				result = 10 * result + (value[i] - 48);
+			}
+			return result;
+		}
+		which performed extrodinarily faster than the parse over a million conversions, this method took 3 milliseconds compared to 121 for IntParseFast
+
+	would a dictionary look up be faster than converting? based on above, will look at this compairison sometime in the future.
+
+Pass parameters by reference --- this would require me to declare a whole boat load of variables, not sure I want to do this
+	-- attempted this, the assignment slowed down the algorithm ever so slightly, so going with the first approach
+
+Store as class variables instead of passing into method (if makes sense)
+
+
+Don't forget about order of points
+
+Would it be faster to use a one dimensional array for the entire image (flatten)?  Can I use nifty tricks with this approach?  Like parallel processing and linq
+
+
+Ideas for Fastest way to load an array: http://coding.grax.com/2011/11/initialize-array-to-value-in-c-very.html
+
+
+
