@@ -1,0 +1,77 @@
+TEST FILES:
+
+Code snippets do not show that all arithmetic results are reduced to modulo 1000.
+
+
+
+
+
+testdata.txt
+============
+
+the test file mentioned in the Programming Challenge #5 specs document.
+
+expected results:  16
+
+roughly equivalent to:
+
+for (int i = 0; i < 10; i++)
+{
+}
+
+
+10-factorial.txt
+================
+
+calculates 1! through 10!, saving each result
+
+expected results:  74
+
+roughly equivalent to:
+
+int[] results = new int[10];
+int product = 1;
+for (int i = 0; i < 10; i++)
+{
+	product *= (i + 1);
+	results[i] = product;
+}
+
+
+nest loops.txt
+==============
+
+expected results:  259
+
+roughly equivalent to:
+
+for (int i = 0; i < 10; i++)
+{
+	for (int j = 0; j < 10; j++)
+	{
+	}
+}
+
+
+
+
+testdata_916.txt
+================
+expected results: 916
+
+Randomly generated series of numbers that were tweaked to refrain from becoming an infinite loop.  Has 1000 instructions.
+
+
+
+Triple nested loops.txt
+=======================
+expected results: 30,451,517
+
+Brian created a series of loops that will tax the code.
+
+
+Triple nested loops 10x20x25.txt
+================================
+expected results:  1,894,803,587
+
+Brian created a series of loops that will tax the code even more than the above file.

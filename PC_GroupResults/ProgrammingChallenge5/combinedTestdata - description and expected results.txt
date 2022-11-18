@@ -1,0 +1,15 @@
+combinedTestdata.txt
+
+tests executed:
+1. triple nested loops
+2. 10-factorial
+3. testdata_916
+4. testdata
+5. store
+
+expected results:
+30451517
+74
+916
+16
+1560

@@ -1,0 +1,12 @@
+30451517
+
+74
+
+916
+
+16
+
+1560
+
+Total Milliseconds: 565
+Total Ticks: 1546998
