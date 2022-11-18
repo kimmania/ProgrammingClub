@@ -1,0 +1,1290 @@
+qrnkpbnp
+.r.pppb.
+.ppp....
+........
+.......P
+......P.
+.BPPRPB.
+KPPPNRNQ
+
+q at row 0, column 0
+
+CHECKMATE
+
+
+pprbnrb.
+pnpk.ppp
+..pq....
+........
+........
+...K....
+.PPRPPPB
+RQBNPNPP
+
+q at row 2, column 3
+
+Move king from 5,3 to 4,2.
+Move king from 5,3 to 4,4.
+Move king from 5,3 to 5,2.
+Move king from 5,3 to 5,4.
+Capture the threat with B from 6,7.
+
+
+rnbbrppp
+qnkpp..p
+p..p....
+........
+........
+..P....P
+.QPPPKNR
+P.PPRBBN
+
+q at row 1, column 0
+
+Move king from 6,5 to 5,5.
+Move king from 6,5 to 5,6.
+
+
+rqnkppnr
+bpbppp..
+....p...
+...p....
+.......P
+........
+PPPPP.BB
+QRNPNRKP
+
+b at row 1, column 0
+
+CHECKMATE
+
+
+brnqpnpr
+p.ppbppk
+..p.....
+........
+........
+.K....PP
+.P.BPPPB
+.PPRNNQR
+
+r at row 0, column 1
+
+Move king from 5,1 to 4,0.
+Move king from 5,1 to 4,2.
+Move king from 5,1 to 5,2.
+Move king from 5,1 to 6,0.
+Move king from 5,1 to 6,2.
+
+
+prpqrbpn
+knp...p.
+pppb....
+........
+........
+...P.P.P
+.P.PNRQK
+B.PNPRPB
+
+b at row 2, column 3
+
+CHECKMATE
+
+
+brnkbnpr
+pq..p...
+pp.pp...
+..p.....
+.......P
+......P.
+.PPRP.KN
+PBQPPRNB
+
+q at row 1, column 1
+
+Move king from 6,6 to 5,7.
+Move king from 6,6 to 6,5.
+
+
+pnnrkrpp
+qbbp..pp
+p......p
+........
+........
+.....B.P
+P.PPRPP.
+KPPRQNNB
+
+R at row 6, column 4
+
+Move king from 0,4 to 1,5.
+
+
+rnpbpknp
+rpbp...p
+.qp....p
+........
+.......P
+.P...R.P
+PP..QP..
+PKBRNNBP
+
+R at row 5, column 5
+
+Move king from 0,5 to 1,6.
+
+
+rnnqbrpb
+kppppp..
+......p.
+.p......
+........
+...P....
+.PPPPPPN
+RQKRBPBN
+
+R at row 7, column 0
+
+Move king from 1,0 to 2,1.
+
+
+rbbqpnpp
+pkpprn.p
+........
+.p......
+........
+..K...P.
+PQ.PPP.P
+RPNNBRPB
+
+B at row 7, column 7
+
+Move king from 1,1 to 2,0.
+Move king from 1,1 to 2,1.
+
+
+rbqpkppn
+nbp.p.p.
+p..pr...
+........
+......P.
+.......P
+PBP.NPKR
+.PQPBRPN
+
+b at row 1, column 1
+
+Move king from 6,6 to 5,6.
+
+
+pbrbknnp
+.ppprppq
+p.......
+........
+......P.
+....P.R.
+PP..BP.K
+QPPNBPNR
+
+q at row 1, column 7
+
+Move king from 6,7 to 6,6.
+
+
+qrbnkbpp
+pnpp..pr
+p....p..
+........
+........
+.P.P.P..
+.P.P.PPN
+RBNRQBPK
+
+Q at row 7, column 4
+
+Move king from 0,4 to 1,5.
+
+
+rpbprbpn
+pp.n.qpk
+pp......
+........
+........
+.P....RP
+...PPPNP
+PBPBRKQN
+
+B at row 7, column 1
+
+Move king from 1,7 to 2,7.
+
+
+qrppn..p
+pprbpkbn
+....p...
+...p....
+........
+....P..P
+PKPBPP.Q
+PBP.RNNR
+
+b at row 1, column 6
+
+Move king from 6,1 to 5,0.
+Move king from 6,1 to 5,1.
+
+
+rnqbp.np
+kbpppprp
+....p...
+........
+........
+......PP
+PB.BRQ.P
+PPNPKRPN
+
+Q at row 6, column 5
+
+Move king from 1,0 to 2,0.
+
+
+bbqnrnpp
+prpkp.p.
+..p..p..
+........
+.......P
+.....RP.
+.PP.P.PK
+PNBQBNPR
+
+Q at row 7, column 3
+
+Move king from 1,3 to 2,4.
+
+
+rqrpbbpp
+pnp.n.pp
+...k...p
+........
+.......P
+.....PQP
+...PPPNK
+PR.NRBPB
+
+Q at row 5, column 6
+
+Move king from 2,3 to 1,3.
+Move king from 2,3 to 2,2.
+Move king from 2,3 to 2,4.
+Move king from 2,3 to 3,2.
+Move king from 2,3 to 3,3.
+
+
+brrpnppq
+p.ppnkpb
+....p...
+........
+........
+P....P.P
+..PPRP.P
+RKPBQBNN
+
+r at row 0, column 1
+
+Move king from 7,1 to 6,0.
+
+
+rqbnppbp
+.pnp.kpr
+p.......
+p.......
+........
+.......R
+BPP.NPPB
+PPQPRPKN
+
+B at row 6, column 0
+
+Move king from 1,5 to 1,4.
+Move king from 1,5 to 2,5.
+Move king from 1,5 to 2,6.
+
+
+qrpb.pnn
+kppprbp.
+..pp....
+........
+........
+.....P..
+.PPPPPBP
+QRNKPBNR
+
+Q at row 7, column 0
+
+Move king from 1,0 to 2,1.
+
+
+nrbbpprq
+pp.kpn.p
+..p...p.
+........
+........
+....PP.R
+P.BRPPK.
+QPN.NPPB
+
+R at row 6, column 3
+
+Move king from 1,3 to 1,2.
+Move king from 1,3 to 2,4.
+
+
+rbqbrnkn
+p.ppp...
+.p..p..p
+...p....
+........
+P....P..
+PP.PK.QB
+RPPNBRPN
+
+Q at row 6, column 6
+
+Move king from 0,6 to 1,5.
+Move king from 0,6 to 1,7.
+
+
+bnrqrpbk
+pnp.p.pp
+..p....p
+........
+.......P
+...K..P.
+...PBPPB
+PNPRRNQP
+
+q at row 0, column 3
+
+Move king from 5,3 to 4,4.
+Move king from 5,3 to 5,2.
+Move king from 5,3 to 5,4.
+Move king from 5,3 to 6,2.
+
+
+rnpkrbnp
+qbp..pp.
+.....p..
+.p.p....
+........
+.P....P.
+.BPPB.PN
+PRNPQRKP
+
+q at row 1, column 0
+
+CHECKMATE
+
+
+bnpnbppp
+..pq.rpk
+rp.p....
+........
+......R.
+....P...
+PP..BPQN
+PBPPRKPN
+
+B at row 7, column 1
+
+Move king from 1,7 to 2,7.
+
+
+rrnnbppb
+pqkpp..p
+...pp...
+........
+........
+..P.PP..
+B...PPRP
+BKPNNPRQ
+
+q at row 1, column 1
+
+Move king from 7,1 to 6,2.
+
+
+npbrpqpb
+pk.p.rn.
+p..p....
+..p.....
+........
+......NQ
+.RPP.BPP
+NPPPKPBR
+
+R at row 6, column 1
+
+Move king from 1,1 to 1,2.
+Move king from 1,1 to 2,2.
+
+
+rnbnrppb
+pppqp..p
+k....p..
+........
+....P...
+.....P..
+.PPB.PPR
+KRNNPQPB
+
+Q at row 7, column 5
+
+Move king from 2,0 to 2,1.
+
+
+bnrpppnr
+kpb.p...
+...pq.p.
+..p.....
+........
+...P.P.Q
+..PPNPPP
+R.PKNBBR
+
+R at row 7, column 0
+
+Move king from 1,0 to 2,1.
+
+
+bnrbnrpq
+kp.pp.p.
+pp..p...
+........
+........
+.R.PP.P.
+.PP..PNK
+PNP.BQBR
+
+q at row 0, column 7
+
+CHECKMATE
+
+
+pbnbqrkr
+np.pp.pp
+.p.p....
+........
+........
+...PP..P
+B.P.RPRP
+.NNKPPQB
+
+B at row 6, column 0
+
+CHECKMATE
+
+
+pbqpppnp
+kprprbpn
+........
+........
+........
+.P......
+.PPPNPBR
+QPBNPPKR
+
+Q at row 7, column 0
+
+Move king from 1,0 to 2,1.
+
+
+nprqpbnb
+k.p.pp.p
+...p.p.r
+........
+........
+.....PP.
+.P.PPBRP
+NPKNBPQR
+
+B at row 6, column 5
+
+Move king from 1,0 to 1,1.
+Move king from 1,0 to 2,0.
+
+
+bnrppqn.
+rpkbp.p.
+p..pp...
+........
+...P....
+.......P
+.PRNPBPK
+.PPQPNRB
+
+R at row 6, column 2
+
+Move king from 1,2 to 2,1.
+
+
+npnrppqb
+p.rbkppp
+..p.....
+........
+........
+....R..P
+PPPPPP..
+NKBBPQNR
+
+R at row 5, column 4
+
+Move king from 1,4 to 2,3.
+Move king from 1,4 to 2,5.
+
+
+rknrpnqb
+pppppp..
+b...p...
+........
+........
+....PP..
+P..PPPPB
+KBRNQPNR
+
+b at row 0, column 7
+
+CHECKMATE
+
+
+bpqknr.p
+bpn.rppp
+.p......
+..p.....
+........
+.P......
+.PPRPBPN
+PQRKPNBP
+
+R at row 6, column 3
+
+CHECKMATE
+
+
+prkbrn.q
+nb.pp..p
+p...pp..
+.p......
+......P.
+....PP..
+.P.RBPPB
+N.QNPKPR
+
+Q at row 7, column 2
+
+CHECKMATE
+
+
+bbppnrrp
+knpppp.q
+...p....
+........
+...P....
+....P...
+P..PPBPK
+RBNQNPPR
+
+q at row 1, column 7
+
+Capture the threat with B from 7,1.
+
+
+nbrbnppp
+.p.pq.pk
+......p.
+.pr.....
+......Q.
+......PN
+P..PP.PP
+PNKBPRBR
+
+r at row 3, column 2
+
+Move king from 7,2 to 6,1.
+Capture the threat with B from 7,6.
+
+
+qbnnprpp
+p.pbrpkp
+p.......
+........
+...P....
+..BP..R.
+..PPP..K
+PQPNNPBR
+
+R at row 5, column 6
+
+Move king from 1,6 to 2,5.
+Move king from 1,6 to 2,7.
+
+
+rqbnnppb
+p.kpppp.
+rp......
+........
+.P......
+....P...
+P.P.PPQB
+RNPPKBRN
+
+B at row 6, column 7
+
+CHECKMATE
+
+
+rqpbbnpn
+prppp.p.
+k.p.....
+........
+.......P
+..P..K..
+..PP.RPP
+QPBNPRNB
+
+Q at row 7, column 0
+
+Move king from 2,0 to 2,1.
+Move king from 2,0 to 3,1.
+
+
+prbpnbqn
+pppr.k.p
+p.p.....
+........
+........
+..PP...R
+..P.QPKP
+BRPPBNPN
+
+q at row 0, column 6
+
+Move king from 6,6 to 5,5.
+
+
+nrrbpnqp
+pb.kpppp
+.....p..
+........
+........
+.....B.N
+PPPQ.PPP
+PKP.BRRN
+
+Q at row 6, column 3
+
+Move king from 1,3 to 1,2.
+Move king from 1,3 to 2,4.
+
+
+pnbkrbnr
+qpp..pp.
+..ppp...
+........
+.......P
+...P....
+.PP.PBPP
+KPRQNBNR
+
+q at row 1, column 0
+
+Capture the threat with B from 6,5.
+
+
+bpppq.nb
+pnrrkpp.
+.......p
+..p.....
+........
+......PP
+.PPP.PPN
+BBKPQRNR
+
+Q at row 7, column 4
+
+Move king from 1,4 to 0,5.
+Move king from 1,4 to 2,3.
+Move king from 1,4 to 2,5.
+
+
+npbpprrn
+pk.pqpp.
+...pb...
+........
+........
+..PP..P.
+.PPP.PBP
+.NNQRKBR
+
+B at row 6, column 6
+
+Move king from 1,1 to 1,2.
+Move king from 1,1 to 2,0.
+Move king from 1,1 to 2,1.
+
+
+bpbqnkpr
+nrpp..pp
+.p......
+.......p
+.......P
+....PR..
+..PNPPB.
+PPBQPNRK
+
+R at row 5, column 5
+
+Move king from 0,5 to 1,4.
+
+
+qnbnkprb
+.pppprp.
+..p....p
+........
+........
+..P...P.
+BPPPN.RQ
+BPPPRK.N
+
+r at row 1, column 5
+
+Move king from 7,5 to 7,6.
+Capture the threat with B from 6,0.
+
+
+pnbpnrpq
+ppprpkb.
+.p......
+........
+........
+......P.
+.PPPPRPP
+BRBKNQNP
+
+R at row 6, column 5
+
+Move king from 1,5 to 2,4.
+Move king from 1,5 to 2,6.
+
+
+qnbnpbrp
+rpkppp..
+pp......
+........
+........
+.PPP...Q
+PP.K.RPB
+NN.P.RPB
+
+B at row 6, column 7
+
+Move king from 1,2 to 2,2.
+
+
+qpnbpbp.
+rnprkp.p
+p......p
+........
+........
+.....BP.
+PNRP.PP.
+PPKPRBNQ
+
+R at row 7, column 4
+
+Move king from 1,4 to 2,3.
+Move king from 1,4 to 2,5.
+
+
+rnkpbqpb
+pnr.pp..
+...ppp..
+........
+.....P..
+....P...
+P..PPBBP
+QNKPPNRR
+
+r at row 1, column 2
+
+Move king from 7,2 to 6,1.
+
+
+nbbpkrpp
+npqp.p..
+p...r...
+p.......
+........
+.....P.P
+P.PPN.PK
+RPPNRBBQ
+
+q at row 1, column 2
+
+CHECKMATE
+
+
+qrbnpknp
+.rpppb..
+..p.p..p
+........
+........
+......PP
+K.PQRP.P
+PNBNPPBR
+
+q at row 0, column 0
+
+CHECKMATE
+
+
+qppbpprr
+bpknnp..
+p......p
+.......P
+.......P
+....P..P
+PR..PN.P
+PRNBQ.KB
+
+r at row 0, column 6
+
+Move king from 7,6 to 7,5.
+
+
+pnqbrpbp
+krnpp..p
+........
+p...p...
+........
+....Q.PP
+NP..RBPP
+.BKRPNPP
+
+Q at row 5, column 4
+
+Move king from 1,0 to 2,0.
+
+
+rbppnkpp
+nbrqp...
+..pp...p
+........
+........
+P.......
+.PPNPRNP
+PKQRPBBP
+
+R at row 6, column 5
+
+Move king from 0,5 to 1,6.
+
+
+rknpqrpb
+b.pnp.p.
+p...pp..
+........
+........
+P......K
+P.PP.PBN
+PRQBNPRP
+
+R at row 7, column 1
+
+CHECKMATE
+
+
+rnrqkb.p
+bpppnpp.
+..p...p.
+........
+........
+........
+PNPPPKQP
+PPPRNRBB
+
+b at row 1, column 0
+
+Move king from 6,5 to 5,5.
+Move king from 6,5 to 5,6.
+
+
+rbnpbpnr
+pp.p.qpk
+.....p..
+p.......
+........
+....PP..
+PQRPP..R
+BNNKPBPP
+
+R at row 6, column 7
+
+Move king from 1,7 to 2,6.
+Capture the threat with b from 0,1.
+
+
+pbnprrpq
+kbn.p..p
+p.p.....
+....p...
+.......P
+....P...
+PPPPR.QN
+.BNPRKBP
+
+r at row 0, column 5
+
+CHECKMATE
+
+
+bpnrbrpp
+pkpqpnp.
+........
+....p...
+........
+....PB..
+.P.PPPRP
+PQKPNNBR
+
+B at row 5, column 5
+
+Move king from 1,1 to 2,0.
+Move king from 1,1 to 2,1.
+
+
+rnbqp.kn
+ppbp.rpp
+...p..p.
+........
+........
+...P...Q
+PP.RBKPP
+.PNRPPBN
+
+r at row 1, column 5
+
+Move king from 6,5 to 5,4.
+Move king from 6,5 to 5,6.
+
+
+k.......
+.P......
+........
+........
+........
+........
+........
+....K...
+
+P at row 1, column 1
+
+Move king from 0,0 to 0,1.
+Move king from 0,0 to 1,0.
+
+
+.......k
+......P.
+........
+........
+........
+........
+........
+....K...
+
+P at row 1, column 6
+
+Move king from 0,7 to 0,6.
+Move king from 0,7 to 1,7.
+
+
+...k....
+........
+........
+........
+........
+........
+......p.
+.......K
+
+p at row 6, column 6
+
+Move king from 7,7 to 6,7.
+Move king from 7,7 to 7,6.
+
+
+k.......
+........
+........
+........
+........
+........
+........
+....K..B
+
+B at row 7, column 7
+
+Move king from 0,0 to 0,1.
+Move king from 0,0 to 1,0.
+
+
+q..k....
+........
+........
+........
+........
+........
+........
+.......K
+
+q at row 0, column 0
+
+Move king from 7,7 to 6,7.
+Move king from 7,7 to 7,6.
+
+
+...kr...
+........
+........
+........
+........
+........
+........
+....K...
+
+r at row 0, column 4
+
+Move king from 7,4 to 6,3.
+Move king from 7,4 to 6,5.
+Move king from 7,4 to 7,3.
+Move king from 7,4 to 7,5.
+
+
+...k...R
+........
+........
+........
+........
+........
+........
+....K...
+
+R at row 0, column 7
+
+Move king from 0,3 to 1,2.
+Move king from 0,3 to 1,3.
+Move king from 0,3 to 1,4.
+
+
+...k....
+........
+........
+........
+........
+........
+........
+..r.K...
+
+r at row 7, column 2
+
+Move king from 7,4 to 6,3.
+Move king from 7,4 to 6,4.
+Move king from 7,4 to 6,5.
+
+
+.Q......
+........
+...k....
+........
+........
+........
+........
+..K.....
+
+Q at row 0, column 1
+
+Move king from 2,3 to 1,3.
+Move king from 2,3 to 1,4.
+Move king from 2,3 to 2,2.
+Move king from 2,3 to 2,4.
+Move king from 2,3 to 3,2.
+Move king from 2,3 to 3,3.
+
+
+.....k..
+........
+........
+........
+........
+.K......
+........
+.r......
+
+r at row 7, column 1
+
+Move king from 5,1 to 4,0.
+Move king from 5,1 to 4,2.
+Move king from 5,1 to 5,0.
+Move king from 5,1 to 5,2.
+Move king from 5,1 to 6,0.
+Move king from 5,1 to 6,2.
+
+
+..N.....
+........
+...k....
+........
+........
+........
+........
+.....K..
+
+N at row 0, column 2
+
+Move king from 2,3 to 1,2.
+Move king from 2,3 to 1,3.
+Move king from 2,3 to 2,2.
+Move king from 2,3 to 2,4.
+Move king from 2,3 to 3,2.
+Move king from 2,3 to 3,3.
+Move king from 2,3 to 3,4.
+
+
+...k....
+........
+........
+........
+........
+..nPP...
+...PK...
+........
+
+n at row 5, column 2
+
+Move king from 6,4 to 5,5.
+Move king from 6,4 to 6,5.
+Move king from 6,4 to 7,4.
+Move king from 6,4 to 7,5.
+
+
+........
+....k...
+..N.....
+........
+........
+........
+........
+...K....
+
+N at row 2, column 2
+
+Move king from 1,4 to 0,4.
+Move king from 1,4 to 0,5.
+Move king from 1,4 to 1,3.
+Move king from 1,4 to 1,5.
+Move king from 1,4 to 2,3.
+Move king from 1,4 to 2,4.
+Move king from 1,4 to 2,5.
+
+
+....k...
+........
+...N....
+........
+........
+........
+........
+....K...
+
+N at row 2, column 3
+
+Move king from 0,4 to 0,3.
+Move king from 0,4 to 0,5.
+Move king from 0,4 to 1,3.
+Move king from 0,4 to 1,4.
+
+
+..k.....
+........
+........
+....K...
+........
+.....n..
+........
+........
+
+n at row 5, column 5
+
+Move king from 3,4 to 2,3.
+Move king from 3,4 to 2,4.
+Move king from 3,4 to 2,5.
+Move king from 3,4 to 3,3.
+Move king from 3,4 to 3,5.
+Move king from 3,4 to 4,4.
+Move king from 3,4 to 4,5.
+
+
+........
+...k....
+.....N..
+........
+........
+........
+..K.....
+........
+
+N at row 2, column 5
+
+Move king from 1,3 to 0,2.
+Move king from 1,3 to 0,3.
+Move king from 1,3 to 1,2.
+Move king from 1,3 to 1,4.
+Move king from 1,3 to 2,2.
+Move king from 1,3 to 2,3.
+Move king from 1,3 to 2,4.
+
+
+........
+........
+..k.....
+........
+........
+........
+.....n..
+...K....
+
+n at row 6, column 5
+
+Move king from 7,3 to 6,2.
+Move king from 7,3 to 6,3.
+Move king from 7,3 to 6,4.
+Move king from 7,3 to 7,2.
+Move king from 7,3 to 7,4.
+
+
+......k.
+........
+........
+........
+........
+...n....
+........
+..K.....
+
+n at row 5, column 3
+
+Move king from 7,2 to 6,2.
+Move king from 7,2 to 6,3.
+Move king from 7,2 to 7,1.
+Move king from 7,2 to 7,3.
+
+
